@@ -1,11 +1,10 @@
 import "./App.css";
 import "bootstrap";
-import SideBar from "./components/Navigation/SideBar";
 
 function App() {
   return (
     <div className="App">
-      <SideBar />
+      <h2 className="fw-bold">Hello World</h2>
     </div>
   );
 }

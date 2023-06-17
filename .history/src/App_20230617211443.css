@@ -12,5 +12,9 @@
 }
 
 .custom-bg-color {
-  background-color: #2f3061;
+  background-color: #2f3061 !important;
+}
+
+.customer-border {
+  border: 1px solid #2f3061;
 }
