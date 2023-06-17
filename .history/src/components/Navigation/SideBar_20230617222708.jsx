@@ -8,7 +8,6 @@ import {
   BookFill,
   PersonBadgeFill,
   Power,
-  EvFrontFill,
 } from "react-bootstrap-icons";
 
 const commonLinkClasses =
@@ -16,11 +15,7 @@ const commonLinkClasses =
 const SideBar = () => {
   return (
     <div className="col-2 vh-100 custom-bg-color shadow-sm p-5 text-light d-flex flex-column vstack gap-5">
-      <Link to={"/"} className={commonLinkClasses + " fs-3"}>
-        <span>
-          <EvFrontFill /> Bondy
-        </span>
-      </Link>
+      <Link to={"/"} className={commonLinkClasses + " fs-4"}></Link>
       <Link to={"/home"} className={commonLinkClasses}>
         <HouseFill />
         Home

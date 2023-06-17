@@ -16,10 +16,11 @@ const commonLinkClasses =
 const SideBar = () => {
   return (
     <div className="col-2 vh-100 custom-bg-color shadow-sm p-5 text-light d-flex flex-column vstack gap-5">
-      <Link to={"/"} className={commonLinkClasses + " fs-3"}>
-        <span>
-          <EvFrontFill /> Bondy
-        </span>
+      <Link
+        to={"/"}
+        className={commonLinkClasses + " fs-3 border rounded-4 gap-1"}
+      >
+        <EvFrontFill /> Bondy
       </Link>
       <Link to={"/home"} className={commonLinkClasses}>
         <HouseFill />
