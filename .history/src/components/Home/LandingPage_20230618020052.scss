@@ -1,0 +1,22 @@
+.scroll-container-fixed {
+  position: fixed !important;
+}
+
+.scroll-container-size {
+  height: 330px !important;
+}
+
+.scroller {
+  overflow: auto;
+  scrollbar-width: none;
+}
+.scroller::-webkit-scrollbar {
+  display: none;
+}
+.service-card {
+  height: 270px !important;
+}
+
+.service-icon-font {
+  font-size: 60px !important;
+}
