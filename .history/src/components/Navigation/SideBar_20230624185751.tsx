@@ -10,8 +10,6 @@ import {
   Power,
   EvFrontFill,
   MenuButtonWideFill,
-  SunFill,
-  MoonFill,
 } from "react-bootstrap-icons";
 
 const SideBar: FunctionComponent = () => {
@@ -40,7 +38,6 @@ const SideBar: FunctionComponent = () => {
         }`}
         onMouseEnter={() => setHoverHome(true)}
         onMouseLeave={() => setHoverHome(false)}
-        title="Home"
       >
         <HouseFill />
         Home
@@ -54,7 +51,6 @@ const SideBar: FunctionComponent = () => {
         }`}
         onMouseEnter={() => setHoverServices(true)}
         onMouseLeave={() => setHoverServices(false)}
-        title="Services"
       >
         <MenuButtonWideFill />
         Services
@@ -68,7 +64,6 @@ const SideBar: FunctionComponent = () => {
         }`}
         onMouseEnter={() => setHoverBookService(true)}
         onMouseLeave={() => setHoverBookService(false)}
-        title="Book Service"
       >
         <BagFill />
         Book Service
@@ -82,23 +77,10 @@ const SideBar: FunctionComponent = () => {
         }`}
         onMouseEnter={() => setHoverAdmin(true)}
         onMouseLeave={() => setHoverAdmin(false)}
-        title="Admin"
       >
         <PersonBadgeFill />
         Admin
       </Link>
-
-      <div className="form-check form-switch px-5 d-flex flex-row flex-nowrap">
-        <SunFill className="mx-auto mt-1" />
-        <input
-          className="form-check-input mx-auto"
-          type="checkbox"
-          role="switch"
-          id="flexSwitchCheckChecked"
-          title="Switch display mode"
-        />
-        <MoonFill className="mx-auto mt-1" />
-      </div>
 
       <Link
         to={"/logout"}
@@ -108,11 +90,11 @@ const SideBar: FunctionComponent = () => {
         }`}
         onMouseEnter={() => setHoverLogout(true)}
         onMouseLeave={() => setHoverLogout(false)}
-        title="Logout"
       >
         <Power />
         Log Out
       </Link>
+      <input className="form-switch" type="switch" value={"Mode"} />
     </div>
   );
 };

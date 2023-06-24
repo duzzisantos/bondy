@@ -82,7 +82,7 @@ const SideBar: FunctionComponent = () => {
         }`}
         onMouseEnter={() => setHoverAdmin(true)}
         onMouseLeave={() => setHoverAdmin(false)}
-        title="Admin"
+        title="Administrator"
       >
         <PersonBadgeFill />
         Admin

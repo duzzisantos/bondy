@@ -40,7 +40,6 @@ const SideBar: FunctionComponent = () => {
         }`}
         onMouseEnter={() => setHoverHome(true)}
         onMouseLeave={() => setHoverHome(false)}
-        title="Home"
       >
         <HouseFill />
         Home
@@ -54,7 +53,6 @@ const SideBar: FunctionComponent = () => {
         }`}
         onMouseEnter={() => setHoverServices(true)}
         onMouseLeave={() => setHoverServices(false)}
-        title="Services"
       >
         <MenuButtonWideFill />
         Services
@@ -68,7 +66,6 @@ const SideBar: FunctionComponent = () => {
         }`}
         onMouseEnter={() => setHoverBookService(true)}
         onMouseLeave={() => setHoverBookService(false)}
-        title="Book Service"
       >
         <BagFill />
         Book Service
@@ -82,7 +79,6 @@ const SideBar: FunctionComponent = () => {
         }`}
         onMouseEnter={() => setHoverAdmin(true)}
         onMouseLeave={() => setHoverAdmin(false)}
-        title="Admin"
       >
         <PersonBadgeFill />
         Admin
@@ -108,7 +104,6 @@ const SideBar: FunctionComponent = () => {
         }`}
         onMouseEnter={() => setHoverLogout(true)}
         onMouseLeave={() => setHoverLogout(false)}
-        title="Logout"
       >
         <Power />
         Log Out

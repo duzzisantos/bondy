@@ -19,13 +19,8 @@
   border: 1px solid #2f3061;
 }
 
-.custom-border-5 {
+.custom-border-five {
   border-right-style: solid !important;
-  border-right-width: 8px !important;
+  border-right-width: 10px !important;
   border-right-color: #2f3061 !important;
-}
-
-.image-height {
-  height: fit-content;
-  width: fit-content;
 }

@@ -13,7 +13,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/home" element={<LandingPage />} />
           <Route
-            path="services/Suspension Systems"
+            path="home/Suspension Systems"
             element={<SuspensionSystems />}
           />
         </Routes>
