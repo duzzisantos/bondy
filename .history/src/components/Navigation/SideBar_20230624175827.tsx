@@ -20,11 +20,14 @@ const SideBar: FunctionComponent = () => {
   const [hoverAdmin, setHoverAdmin] = useState(false);
   const [hoverLogout, setHoverLogout] = useState(false);
 
-  const commonLinkClasses = `d-flex flex-column justify-content-center align-items-center p-1 gap-2 brand-icon-color
-   text-decoration-none fw-bold`;
+  const commonLinkClasses = `d-flex flex-column justify-content-center align-items-center p-1 gap-2 ${
+    hoverHome || hoverServices || hoverBookService || hoverAdmin || hoverLogout
+      ? "brand-icon-color"
+      : "text-light"
+  } text-decoration-none fw-bold`;
 
   return (
-    <div className="col-2 vh-100 custom-bg-color shadow-sm p-5 text-light d-flex flex-column vstack gap-5 sidebar-fixed">
+    <div className="col-1 vh-100 custom-bg-color shadow-sm p-5 text-light d-flex flex-column vstack gap-5">
       <Link to={"/"} className={commonLinkClasses + " fs-3"}>
         <span>
           <EvFrontFill className="brand-icon-color" /> Bondy
@@ -46,9 +49,7 @@ const SideBar: FunctionComponent = () => {
       <Link
         to={"/services"}
         id="services"
-        className={`d-flex flex-column justify-content-center align-items-center p-1 gap-2 text-decoration-none fw-bold ${
-          hoverServices ? "brand-icon-color" : "text-light"
-        }`}
+        className={commonLinkClasses}
         onMouseEnter={() => setHoverServices(true)}
         onMouseLeave={() => setHoverServices(false)}
       >
@@ -59,9 +60,7 @@ const SideBar: FunctionComponent = () => {
       <Link
         to={"/book-service"}
         id="book-service"
-        className={`d-flex flex-column justify-content-center align-items-center p-1 gap-2 text-decoration-none fw-bold ${
-          hoverBookService ? "brand-icon-color" : "text-light"
-        }`}
+        className={commonLinkClasses}
         onMouseEnter={() => setHoverBookService(true)}
         onMouseLeave={() => setHoverBookService(false)}
       >
@@ -72,9 +71,7 @@ const SideBar: FunctionComponent = () => {
       <Link
         to={"/admin"}
         id="admin"
-        className={`d-flex flex-column justify-content-center align-items-center p-1 gap-2 text-decoration-none fw-bold ${
-          hoverAdmin ? "brand-icon-color" : "text-light"
-        }`}
+        className={commonLinkClasses}
         onMouseEnter={() => setHoverAdmin(true)}
         onMouseLeave={() => setHoverAdmin(false)}
       >
@@ -85,9 +82,7 @@ const SideBar: FunctionComponent = () => {
       <Link
         to={"/logout"}
         id="logout"
-        className={`d-flex flex-column justify-content-center align-items-center p-1 gap-2 text-decoration-none fw-bold ${
-          hoverLogout ? "brand-icon-color" : "text-light"
-        }`}
+        className={commonLinkClasses}
         onMouseEnter={() => setHoverLogout(true)}
         onMouseLeave={() => setHoverLogout(false)}
       >

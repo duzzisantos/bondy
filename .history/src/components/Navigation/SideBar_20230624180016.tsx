@@ -20,11 +20,14 @@ const SideBar: FunctionComponent = () => {
   const [hoverAdmin, setHoverAdmin] = useState(false);
   const [hoverLogout, setHoverLogout] = useState(false);
 
-  const commonLinkClasses = `d-flex flex-column justify-content-center align-items-center p-1 gap-2 brand-icon-color
-   text-decoration-none fw-bold`;
+  const commonLinkClasses = `d-flex flex-column justify-content-center align-items-center p-1 gap-2 ${
+    hoverHome || hoverServices || hoverBookService || hoverAdmin || hoverLogout
+      ? "brand-icon-color"
+      : "text-light"
+  } text-decoration-none fw-bold`;
 
   return (
-    <div className="col-2 vh-100 custom-bg-color shadow-sm p-5 text-light d-flex flex-column vstack gap-5 sidebar-fixed">
+    <div className="col-1 vh-100 custom-bg-color shadow-sm p-5 text-light d-flex flex-column vstack gap-5">
       <Link to={"/"} className={commonLinkClasses + " fs-3"}>
         <span>
           <EvFrontFill className="brand-icon-color" /> Bondy

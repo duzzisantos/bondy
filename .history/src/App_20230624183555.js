@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App d-flex flex-row flex-nowrap vh-100">
       <SideBar />
-      <main className="col-12 ms-auto d-flex flex-column vh-100">
+      <main className="col-10 bg-success mx-3 d-flex flex-column vh-100">
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/home" element={<LandingPage />} />

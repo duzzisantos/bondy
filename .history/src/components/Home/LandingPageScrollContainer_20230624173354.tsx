@@ -6,13 +6,11 @@ interface ScrollContainerProps {
   content: any[];
   category: string;
   handleClick: any;
-  extraClass: string;
 }
 const LandingPageScrollContainer: FunctionComponent<ScrollContainerProps> = ({
   content,
   category,
   handleClick,
-  extraClass,
 }) => {
   return (
     <section className="col-6 w-100 scroll-container-size">
@@ -22,7 +20,7 @@ const LandingPageScrollContainer: FunctionComponent<ScrollContainerProps> = ({
           <Link
             to={`/services/${element.category}`}
             key={index}
-            className={`text-decoration-none w-100 shadow-sm d-flex flex-column vstack gap-3 ${extraClass}`}
+            className={`text-decoration-none p-5 w-100 shadow-sm d-flex flex-column vstack gap-3`}
             onClick={handleClick}
             title={element.category}
           >

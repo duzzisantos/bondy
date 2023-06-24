@@ -24,7 +24,7 @@ const SideBar: FunctionComponent = () => {
    text-decoration-none fw-bold`;
 
   return (
-    <div className="col-2 vh-100 custom-bg-color shadow-sm p-5 text-light d-flex flex-column vstack gap-5 sidebar-fixed">
+    <div className="col-1 custom-bg-color shadow-sm p-5 text-light d-flex flex-column vstack gap-5">
       <Link to={"/"} className={commonLinkClasses + " fs-3"}>
         <span>
           <EvFrontFill className="brand-icon-color" /> Bondy

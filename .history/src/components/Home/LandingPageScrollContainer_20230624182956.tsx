@@ -17,7 +17,7 @@ const LandingPageScrollContainer: FunctionComponent<ScrollContainerProps> = ({
   return (
     <section className="col-6 w-100 scroll-container-size">
       <h2 className="text-start mb-4 custom-color">{category}</h2>
-      <div className="overflow-x-auto d-flex flex-row hstack gap-1 shadow-lg scroller">
+      <div className="overflow-x-auto d-flex flex-row hstack gap-3 shadow-lg scroller">
         {content.map((element, index) => (
           <Link
             to={`/services/${element.category}`}

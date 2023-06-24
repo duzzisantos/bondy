@@ -22,7 +22,7 @@ const LandingPageScrollContainer: FunctionComponent<ScrollContainerProps> = ({
           <Link
             to={`/services/${element.category}`}
             key={index}
-            className={`text-decoration-none w-100 shadow-sm d-flex flex-column vstack gap-3 ${extraClass}`}
+            className={`text-decoration-none w-50 shadow-sm d-flex flex-column vstack gap-3 ${extraClass}`}
             onClick={handleClick}
             title={element.category}
           >
