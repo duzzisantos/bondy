@@ -1,12 +1,12 @@
 import React, { FunctionComponent } from "react";
 import ServiceTemplate from "src/components/Services/ServiceTemplate";
 import { mockServiceData } from "src/data/mockData";
-const SuspensionSystems: FunctionComponent = () => {
+const BodyWork: FunctionComponent = () => {
   return (
     <>
-      <ServiceTemplate data={mockServiceData} category="Suspension Systems" />
+      <ServiceTemplate data={mockServiceData} category="Body Work" />
     </>
   );
 };
 
-export default SuspensionSystems;
+export default BodyWork;
