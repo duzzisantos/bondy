@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin&family=Montserrat:wght@200&family=Poppins&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+.App {
+  text-align: center;
+}
+
+.custom-color {
+  color: #2f3061 !important;
+}
+
+.custom-bg-color {
+  background-color: #2f3061 !important;
+}
+
+.custom-border {
+  border: 1px solid #2f3061;
+}
+
+.custom-border-5 {
+  border-right-style: solid !important;
+  border-right-width: 8px !important;
+  border-right-color: #2f3061 !important;
+}
+
+.image-height {
+  height: fit-content;
+  width: fit-content;
+}
+
+.chosen-services {
+  height: 125px !important;
+}
+
+button[role="tab"] {
+  border: 1px solid transparent !important;
+  color: #2f3061;
+  font-size: 13px;
+  text-align: start;
+  text-decoration: underline !important;
+  text-decoration-color: #2f3061 !important;
+  text-decoration-thickness: 3px !important;
+}
+
+button[role="tab"] .add-underline {
+  text-decoration: underline !important;
+  text-decoration-color: #2f3061 !important;
+  text-decoration-thickness: 3px !important;
+}
