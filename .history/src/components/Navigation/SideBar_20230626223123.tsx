@@ -17,7 +17,7 @@ import {
 const SideBar: FunctionComponent = () => {
   //Refactor this
   const [hoverHome, setHoverHome] = useState(false);
-  const [hoverMyServices, setHoverMyServices] = useState(false);
+  // const [hoverServices, setHoverServices] = useState(false);
   const [hoverBookService, setHoverBookService] = useState(false);
   const [hoverAdmin, setHoverAdmin] = useState(false);
   const [hoverLogout, setHoverLogout] = useState(false);
@@ -64,10 +64,10 @@ const SideBar: FunctionComponent = () => {
         to={"/book-service"}
         id="book-service"
         className={`d-flex flex-column justify-content-center align-items-center p-1 gap-2 text-decoration-none fw-bold ${
-          hoverMyServices ? "brand-icon-color" : "text-light"
+          hoverBookService ? "brand-icon-color" : "text-light"
         }`}
-        onMouseEnter={() => setHoverMyServices(true)}
-        onMouseLeave={() => setHoverMyServices(false)}
+        onMouseEnter={() => setHoverBookService(true)}
+        onMouseLeave={() => setHoverBookService(false)}
         title="Book Service"
       >
         <BagFill />
