@@ -83,13 +83,11 @@ const ServiceTemplate: FunctionComponent<Props> = ({
               className={`${
                 previous && next
                   ? "justify-content-between"
-                  : !previous && next
-                  ? "justify-content-start"
-                  : "justify-content-between"
+                  : "justify-content-start"
               } d-flex flex-row flex-nowrap`}
             >
-              {previous && (
-                <div className="w-25">
+              <div className="w-25">
+                {previous && (
                   <div className="d-flex flex-column vstack gap-1">
                     <Button
                       className="btn btn-sm bg-transparent text-secondary border-0 text-start"
@@ -97,41 +95,29 @@ const ServiceTemplate: FunctionComponent<Props> = ({
                     >
                       <ArrowLeftCircleFill /> Previous service
                     </Button>
-                    <small
-                      className={`ps-2 small-font text-dark`}
-                      title={`Previous service is ${previousPage}`}
-                    >
+                    <small className="ps-2 small-font text-dark">
                       {previousPage}
                     </small>
                   </div>
-                </div>
-              )}
-              {next && (
-                <div className={`w-25`}>
-                  <div
-                    className={`d-flex flex-column vstack gap-1 ${
-                      !previous ? "text-start" : "text-end"
-                    }`}
-                  >
+                )}
+              </div>
+              <div className="w-25">
+                {next && (
+                  <div className={`d-flex flex-column vstack gap-1`}>
                     <Button
                       className={`btn btn-sm bg-transparent text-secondary border-0 ${
-                        !previous ? "text-start" : "text-end"
+                        !previous ? "text-center" : "text-end"
                       }`}
                       onClick={handleNext}
                     >
                       <ArrowRightCircleFill /> Next service
                     </Button>
-                    <small
-                      className={`${
-                        !previous ? "ps-2" : "pe-2"
-                      } small-font text-primary`}
-                      title={`Next service is ${nextPage}`}
-                    >
+                    <small className="pe-2 small-font text-primary">
                       {nextPage}
                     </small>
                   </div>
-                </div>
-              )}
+                )}
+              </div>
             </div>
             <section className="p-4 shadow-sm custom-border-5">
               <h5 className="fw-bold">

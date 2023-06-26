@@ -98,7 +98,9 @@ const ServiceTemplate: FunctionComponent<Props> = ({
                       <ArrowLeftCircleFill /> Previous service
                     </Button>
                     <small
-                      className={`ps-2 small-font text-dark`}
+                      className={`${
+                        !previous ? "pe-2" : "ps-2"
+                      } small-font text-dark`}
                       title={`Previous service is ${previousPage}`}
                     >
                       {previousPage}
@@ -122,9 +124,7 @@ const ServiceTemplate: FunctionComponent<Props> = ({
                       <ArrowRightCircleFill /> Next service
                     </Button>
                     <small
-                      className={`${
-                        !previous ? "ps-2" : "pe-2"
-                      } small-font text-primary`}
+                      className="pe-2 small-font text-primary"
                       title={`Next service is ${nextPage}`}
                     >
                       {nextPage}

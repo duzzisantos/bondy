@@ -1,5 +1,4 @@
 import React, { FunctionComponent, useEffect, useState } from "react";
-import "../Services/Services.scss";
 import { Button, Card } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
 import {
@@ -29,15 +28,12 @@ const ServiceTemplate: FunctionComponent<Props> = ({
   const getCategories = data.map((element) => element.category);
 
   //pagination of the services content
-  const currentPage = getCategories.indexOf(category);
-  const nextPage = getCategories[currentPage + 1];
-  const previousPage = getCategories[currentPage - 1];
 
   //move to the previous content as long there is still data in the previous index of the array
   const handlePrev = () => {
     const currentIndex = getCategories.indexOf(category);
     if (currentIndex !== -1 && currentIndex - 1 >= 0) {
-      const previousCategory = previousPage;
+      const previousCategory = getCategories[currentIndex - 1];
       navigate(`/services/${previousCategory}`);
     }
   };
@@ -46,7 +42,7 @@ const ServiceTemplate: FunctionComponent<Props> = ({
   const handleNext = () => {
     const currentIndex = getCategories.indexOf(category);
     if (currentIndex !== -1 && currentIndex + 1 < getCategories.length) {
-      const nextCategory = nextPage;
+      const nextCategory = getCategories[currentIndex + 1];
       navigate(`/services/${nextCategory}`);
     }
   };
@@ -59,18 +55,17 @@ const ServiceTemplate: FunctionComponent<Props> = ({
     const currentIndex = getCategories.indexOf(category);
     if (currentIndex !== -1) {
       if (currentIndex - 1 >= 0) {
-        setPrevious(previousPage);
+        setPrevious(getCategories[currentIndex - 1]);
       } else {
         setPrevious(null);
       }
       if (currentIndex + 1 < getCategories.length) {
-        setNext(nextPage);
+        setNext(getCategories[currentIndex + 1]);
       } else {
         setNext(null);
       }
     }
-  }, [category, getCategories, nextPage, previousPage]);
-
+  }, [category, getCategories]);
   return (
     <div className="col-10 px-5 pt-5 py-5 ms-auto vh-100 vstack gap-5 d-flex flex-column custom-color">
       {data
@@ -79,59 +74,29 @@ const ServiceTemplate: FunctionComponent<Props> = ({
           <div key={index} className="text-start vstack gap-3">
             <h2 className="fw-bold">{item.category}</h2>
             <hr className="border-2" />
-            <div
-              className={`${
-                previous && next
-                  ? "justify-content-between"
-                  : !previous && next
-                  ? "justify-content-start"
-                  : "justify-content-between"
-              } d-flex flex-row flex-nowrap`}
-            >
-              {previous && (
-                <div className="w-25">
-                  <div className="d-flex flex-column vstack gap-1">
-                    <Button
-                      className="btn btn-sm bg-transparent text-secondary border-0 text-start"
-                      onClick={handlePrev}
-                    >
-                      <ArrowLeftCircleFill /> Previous service
-                    </Button>
-                    <small
-                      className={`ps-2 small-font text-dark`}
-                      title={`Previous service is ${previousPage}`}
-                    >
-                      {previousPage}
-                    </small>
-                  </div>
-                </div>
-              )}
-              {next && (
-                <div className={`w-25`}>
-                  <div
-                    className={`d-flex flex-column vstack gap-1 ${
+            <div className="justify-content-between d-flex flex-row flex-nowrap">
+              <>
+                {previous && (
+                  <Button
+                    className="btn btn-sm bg-transparent text-secondary border-0 w-25 text-start"
+                    onClick={handlePrev}
+                  >
+                    <ArrowLeftCircleFill /> Previous service
+                  </Button>
+                )}
+              </>
+              <>
+                {next && (
+                  <Button
+                    className={`btn btn-sm bg-transparent text-secondary border-0 w-25 ${
                       !previous ? "text-start" : "text-end"
                     }`}
+                    onClick={handleNext}
                   >
-                    <Button
-                      className={`btn btn-sm bg-transparent text-secondary border-0 ${
-                        !previous ? "text-start" : "text-end"
-                      }`}
-                      onClick={handleNext}
-                    >
-                      <ArrowRightCircleFill /> Next service
-                    </Button>
-                    <small
-                      className={`${
-                        !previous ? "ps-2" : "pe-2"
-                      } small-font text-primary`}
-                      title={`Next service is ${nextPage}`}
-                    >
-                      {nextPage}
-                    </small>
-                  </div>
-                </div>
-              )}
+                    <ArrowRightCircleFill /> Next service
+                  </Button>
+                )}
+              </>
             </div>
             <section className="p-4 shadow-sm custom-border-5">
               <h5 className="fw-bold">
@@ -179,7 +144,7 @@ const ServiceTemplate: FunctionComponent<Props> = ({
                 <ArrowLeftCircleFill /> Go home
               </Button>
               <Button
-                className="bg-transparent border border-secondary text-secondary"
+                className="bg-transparent border border-secondary"
                 onClick={() => navigate("/book-service")}
               >
                 Book Service

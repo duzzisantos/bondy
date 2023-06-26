@@ -89,7 +89,7 @@ const ServiceTemplate: FunctionComponent<Props> = ({
               } d-flex flex-row flex-nowrap`}
             >
               {previous && (
-                <div className="w-25">
+                <div className="w-25 bg-warning">
                   <div className="d-flex flex-column vstack gap-1">
                     <Button
                       className="btn btn-sm bg-transparent text-secondary border-0 text-start"
@@ -98,7 +98,7 @@ const ServiceTemplate: FunctionComponent<Props> = ({
                       <ArrowLeftCircleFill /> Previous service
                     </Button>
                     <small
-                      className={`ps-2 small-font text-dark`}
+                      className="ps-2 small-font text-dark"
                       title={`Previous service is ${previousPage}`}
                     >
                       {previousPage}
@@ -106,8 +106,8 @@ const ServiceTemplate: FunctionComponent<Props> = ({
                   </div>
                 </div>
               )}
-              {next && (
-                <div className={`w-25`}>
+              <div className={`w-25 bg-danger`}>
+                {next && (
                   <div
                     className={`d-flex flex-column vstack gap-1 ${
                       !previous ? "text-start" : "text-end"
@@ -122,16 +122,14 @@ const ServiceTemplate: FunctionComponent<Props> = ({
                       <ArrowRightCircleFill /> Next service
                     </Button>
                     <small
-                      className={`${
-                        !previous ? "ps-2" : "pe-2"
-                      } small-font text-primary`}
+                      className="pe-2 small-font text-primary"
                       title={`Next service is ${nextPage}`}
                     >
                       {nextPage}
                     </small>
                   </div>
-                </div>
-              )}
+                )}
+              </div>
             </div>
             <section className="p-4 shadow-sm custom-border-5">
               <h5 className="fw-bold">

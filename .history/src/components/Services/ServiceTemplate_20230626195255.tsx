@@ -1,5 +1,4 @@
 import React, { FunctionComponent, useEffect, useState } from "react";
-import "../Services/Services.scss";
 import { Button, Card } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
 import {
@@ -79,59 +78,37 @@ const ServiceTemplate: FunctionComponent<Props> = ({
           <div key={index} className="text-start vstack gap-3">
             <h2 className="fw-bold">{item.category}</h2>
             <hr className="border-2" />
-            <div
-              className={`${
-                previous && next
-                  ? "justify-content-between"
-                  : !previous && next
-                  ? "justify-content-start"
-                  : "justify-content-between"
-              } d-flex flex-row flex-nowrap`}
-            >
-              {previous && (
-                <div className="w-25">
-                  <div className="d-flex flex-column vstack gap-1">
+            <div className="justify-content-between d-flex flex-row flex-nowrap">
+              <>
+                {previous && (
+                  <div className="d-flex flex-column vstack gap-1 bg-success">
                     <Button
-                      className="btn btn-sm bg-transparent text-secondary border-0 text-start"
+                      className="btn btn-sm bg-transparent text-secondary border-0 w-25 text-start"
                       onClick={handlePrev}
                     >
                       <ArrowLeftCircleFill /> Previous service
                     </Button>
-                    <small
-                      className={`ps-2 small-font text-dark`}
-                      title={`Previous service is ${previousPage}`}
-                    >
-                      {previousPage}
-                    </small>
+                    <small>{previousPage}</small>
                   </div>
-                </div>
-              )}
-              {next && (
-                <div className={`w-25`}>
+                )}
+              </>
+              <>
+                {next && (
                   <div
-                    className={`d-flex flex-column vstack gap-1 ${
+                    className={`d-flex flex-column justify-content-end vstack gap-1 bg-danger ${
                       !previous ? "text-start" : "text-end"
                     }`}
                   >
                     <Button
-                      className={`btn btn-sm bg-transparent text-secondary border-0 ${
-                        !previous ? "text-start" : "text-end"
-                      }`}
+                      className={`btn btn-sm bg-info text-secondary border-0 w-25`}
                       onClick={handleNext}
                     >
                       <ArrowRightCircleFill /> Next service
                     </Button>
-                    <small
-                      className={`${
-                        !previous ? "ps-2" : "pe-2"
-                      } small-font text-primary`}
-                      title={`Next service is ${nextPage}`}
-                    >
-                      {nextPage}
-                    </small>
+                    <small>{nextPage}</small>
                   </div>
-                </div>
-              )}
+                )}
+              </>
             </div>
             <section className="p-4 shadow-sm custom-border-5">
               <h5 className="fw-bold">
