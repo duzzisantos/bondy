@@ -17,7 +17,6 @@ const BookService: FunctionComponent = () => {
   const handleDrop = (event: any) => {
     event.preventDefault();
     const data = event.dataTransfer.getData("Text");
-    console.log(data);
     event.target.appendChild(document.getElementById(data));
   };
 
@@ -84,7 +83,7 @@ const BookService: FunctionComponent = () => {
           <strong>Wishlist</strong>
         </span>
         <div className="hstack gap-4 mt-4 py-4 d-flex flex-row flex-wrap">
-          {[1, 2, 3, 4, 5, 6].map((element) => (
+          {[1, 2, 3, 4, 5, 6, 7].map((element) => (
             <DragDropTarget
               key={element}
               uniqueID={`drop-target-${element}`}
@@ -108,7 +107,7 @@ const BookService: FunctionComponent = () => {
             setWishListFour={changeFour}
             setWishListFive={changeFive}
             setWishListSix={changeSix}
-            handleSubmit={() => console.log("does this work??")}
+            handleSubmit={() => console.log("LOOOL")}
           />
         </>
       </div>

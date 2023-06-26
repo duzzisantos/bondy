@@ -17,10 +17,12 @@ const BookService: FunctionComponent = () => {
   const handleDrop = (event: any) => {
     event.preventDefault();
     const data = event.dataTransfer.getData("Text");
-    console.log(data);
     event.target.appendChild(document.getElementById(data));
+    console.log(event.target.value);
   };
 
+  const targetOne = document.getElementById("drop-target-1")?.innerText;
+  console.log(targetOne);
   //call custom hook
 
   const {

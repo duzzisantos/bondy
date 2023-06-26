@@ -2,7 +2,6 @@ import React, { FunctionComponent } from "react";
 
 import { Tabs, Tab, Card } from "react-bootstrap";
 import BookingForm from "src/components/Services/BookingForm";
-import DragDropTarget from "src/components/Services/DragDropTarget";
 import { mockServiceData } from "src/data/mockData";
 import useBookService from "src/hooks/useBookService";
 const BookService: FunctionComponent = () => {
@@ -17,7 +16,6 @@ const BookService: FunctionComponent = () => {
   const handleDrop = (event: any) => {
     event.preventDefault();
     const data = event.dataTransfer.getData("Text");
-    console.log(data);
     event.target.appendChild(document.getElementById(data));
   };
 
@@ -84,15 +82,54 @@ const BookService: FunctionComponent = () => {
           <strong>Wishlist</strong>
         </span>
         <div className="hstack gap-4 mt-4 py-4 d-flex flex-row flex-wrap">
-          {[1, 2, 3, 4, 5, 6].map((element) => (
-            <DragDropTarget
-              key={element}
-              uniqueID={`drop-target-${element}`}
-              children={"+"}
-              handleDrop={handleDrop}
-              handleDragOver={handleDragOver}
-            />
-          ))}
+          <div
+            className="col-md-4 p-3 chosen-services shadow-sm text-center"
+            id="drop-target1"
+            onDrop={handleDrop}
+            onDragOver={handleDragOver}
+          >
+            +
+          </div>
+          <div
+            className="col-md-4 p-3 chosen-services shadow-sm text-center"
+            id="drop-target2"
+            onDrop={handleDrop}
+            onDragOver={handleDragOver}
+          >
+            +
+          </div>
+          <div
+            className="col-md-4 p-3 chosen-services shadow-sm text-center"
+            id="drop-target3"
+            onDrop={handleDrop}
+            onDragOver={handleDragOver}
+          >
+            +
+          </div>
+          <div
+            className="p-3 col-md-4 chosen-services shadow-sm text-center"
+            id="drop-target4"
+            onDrop={handleDrop}
+            onDragOver={handleDragOver}
+          >
+            +
+          </div>
+          <div
+            className="p-3 col-md-4 chosen-services shadow-sm text-center"
+            id="drop-target5"
+            onDrop={handleDrop}
+            onDragOver={handleDragOver}
+          >
+            +
+          </div>
+          <div
+            className="p-3 col-md-4 chosen-services shadow-sm text-center"
+            id="drop-target6"
+            onDrop={handleDrop}
+            onDragOver={handleDragOver}
+          >
+            +
+          </div>
         </div>
         <>
           <BookingForm
@@ -102,13 +139,13 @@ const BookService: FunctionComponent = () => {
             wishListFour={wishListFour}
             wishListFive={wishListFive}
             wishListSix={wishListSix}
-            setWishlistOne={changeOne}
-            setWishListTwo={changeTwo}
-            setWishListThree={changeThree}
-            setWishListFour={changeFour}
-            setWishListFive={changeFive}
-            setWishListSix={changeSix}
-            handleSubmit={() => console.log("does this work??")}
+            setWishlistOne={""}
+            setWishListTwo={""}
+            setWishListThree={""}
+            setWishListFour={""}
+            setWishListFive={""}
+            setWishListSix={""}
+            handleSubmit={() => console.log("LOOOL")}
           />
         </>
       </div>

@@ -17,7 +17,6 @@ const BookService: FunctionComponent = () => {
   const handleDrop = (event: any) => {
     event.preventDefault();
     const data = event.dataTransfer.getData("Text");
-    console.log(data);
     event.target.appendChild(document.getElementById(data));
   };
 
@@ -108,7 +107,7 @@ const BookService: FunctionComponent = () => {
             setWishListFour={changeFour}
             setWishListFive={changeFive}
             setWishListSix={changeSix}
-            handleSubmit={() => console.log("does this work??")}
+            handleSubmit={() => console.log("LOOOL")}
           />
         </>
       </div>

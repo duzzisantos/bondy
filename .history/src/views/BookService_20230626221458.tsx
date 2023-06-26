@@ -21,6 +21,8 @@ const BookService: FunctionComponent = () => {
     event.target.appendChild(document.getElementById(data));
   };
 
+  const targetOne = document.getElementById("drop-target-1")?.innerText;
+  console.log(targetOne);
   //call custom hook
 
   const {
@@ -108,7 +110,7 @@ const BookService: FunctionComponent = () => {
             setWishListFour={changeFour}
             setWishListFive={changeFive}
             setWishListSix={changeSix}
-            handleSubmit={() => console.log("does this work??")}
+            handleSubmit={() => console.log("LOOOL")}
           />
         </>
       </div>

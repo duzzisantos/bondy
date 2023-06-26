@@ -21,6 +21,8 @@ const BookService: FunctionComponent = () => {
     event.target.appendChild(document.getElementById(data));
   };
 
+  const targetOne = document.getElementById("drop-target-1")?.innerText;
+  console.log(targetOne);
   //call custom hook
 
   const {
