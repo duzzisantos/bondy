@@ -179,10 +179,10 @@ const ServiceTemplate: FunctionComponent<Props> = ({
                 <ArrowLeftCircleFill /> Go home
               </Button>
               <Button
-                className="main-button text-light border-0"
+                className="main-button  border-0"
                 onClick={() => navigate("/book-service")}
               >
-                Start Booking
+                Book Service
               </Button>
             </div>
           </div>

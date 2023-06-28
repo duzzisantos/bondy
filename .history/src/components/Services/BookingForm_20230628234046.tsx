@@ -73,7 +73,10 @@ const BookingForm: FunctionComponent<FormValues> = ({
           onChange={(e: any) => setWishListSix(e.target.value)}
         />
       </div>
-      <Button type="submit" className="main-button text-light border-0">
+      <Button
+        type="submit"
+        className="btn bg-transparent border-secondary custom-color"
+      >
         Book
       </Button>
     </Form>

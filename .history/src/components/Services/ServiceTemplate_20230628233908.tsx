@@ -182,7 +182,7 @@ const ServiceTemplate: FunctionComponent<Props> = ({
                 className="main-button text-light border-0"
                 onClick={() => navigate("/book-service")}
               >
-                Start Booking
+                Book Service
               </Button>
             </div>
           </div>

@@ -66,7 +66,7 @@ const BookService: FunctionComponent = () => {
                 {Object.values(element.images).map((item, i) => (
                   <Card
                     key={i}
-                    className="p-3 bg-transparent border border-secondary draggable-cards"
+                    className="p-3 shadow-sm text-light draggable-cards"
                     draggable="true"
                     id={item.serviceName + "drag-target"}
                     onDragStart={handleDragStart}
