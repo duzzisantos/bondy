@@ -34,7 +34,7 @@ const BookingForm: FunctionComponent<FormValues> = ({
 }) => {
   return (
     <Form>
-      <div className="d-block">
+      <div className="d-none">
         <FormControl
           name={wishListOne}
           id={wishListOne}

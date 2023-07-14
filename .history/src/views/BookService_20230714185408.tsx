@@ -113,7 +113,7 @@ const BookService: FunctionComponent = () => {
             setWishListFour={changeFour}
             setWishListFive={changeFive}
             setWishListSix={changeSix}
-            handleSubmit={handleSubmit}
+            handleSubmit={() => console.log("does this work??")}
           />
         </>
       </div>
