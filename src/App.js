@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import LandingPage from "./views/LandingPage";
 import Services from "./views/Services";
 import BookService from "./views/BookService";
+import MyServices from "./views/MyServices";
 function App() {
   return (
     <div className="App d-flex flex-row flex-nowrap vh-100">
@@ -15,6 +16,7 @@ function App() {
           <Route path="/home" element={<LandingPage />} />
           <Route path="services/:category" element={<Services />} />
           <Route path="book-service" element={<BookService />} />
+          <Route path="my-services" element={<MyServices />} />
         </Routes>
       </main>
     </div>
