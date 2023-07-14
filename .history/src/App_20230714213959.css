@@ -58,13 +58,8 @@ button[role="tab"]:hover {
 }
 
 .hourglass-spin {
-  animation: infinite 5s;
+  animation: infinite;
   animation-name: spinner;
-}
-
-.status-badge {
-  height: 30px !important;
-  width: 30px !important;
 }
 
 @keyframes spinner {

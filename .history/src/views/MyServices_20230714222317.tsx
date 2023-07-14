@@ -42,7 +42,9 @@ const MyServices: FunctionComponent = () => {
                 <PersonCircle />
               </span>
             </div>
-            <span>Kennedy changed oil and cleansed oil filter.</span>
+            <span>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </span>
           </div>
         </div>
       </section>

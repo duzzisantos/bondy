@@ -56,31 +56,3 @@ button[role="tab"]:hover {
 .my-services-details {
   height: fit-content !important;
 }
-
-.hourglass-spin {
-  animation: infinite 5s;
-  animation-name: spinner;
-}
-
-.status-badge {
-  height: 30px !important;
-  width: 30px !important;
-}
-
-@keyframes spinner {
-  0% {
-    rotate: 0deg;
-  }
-  25% {
-    rotate: 90deg;
-  }
-  50% {
-    rotate: 180deg;
-  }
-  75% {
-    rotate: 270deg;
-  }
-  100% {
-    rotate: 360deg;
-  }
-}

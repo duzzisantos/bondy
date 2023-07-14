@@ -12,7 +12,7 @@ const MyServices: FunctionComponent = () => {
         <hr className="border-2" />
       </div>
       <section className="text-start d-flex flex-column vstack gap-3">
-        <h5 className="fw-bold">Tracking service 2122T21</h5>
+        <h5 className="fw-bold">Track your service</h5>
         <div
           className="progress"
           role="progressbar"
@@ -33,7 +33,7 @@ const MyServices: FunctionComponent = () => {
             <HourglassSplit className="fs-4 hourglass-spin" />
             Status report
           </p>
-          <div className="mt-4 shadow-sm p-4 rounded-2 w-75">
+          <div className="mt-4 shadow-lg p-4 rounded-2 w-75">
             <div className="d-flex flex-row justify-content-between fw-semibold text-secondary">
               <p className="hstack gap-1">
                 <ClockHistory /> 15:32 PM <sub>July 12, 2023</sub>
@@ -42,7 +42,9 @@ const MyServices: FunctionComponent = () => {
                 <PersonCircle />
               </span>
             </div>
-            <span>Kennedy changed oil and cleansed oil filter.</span>
+            <span>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </span>
           </div>
         </div>
       </section>

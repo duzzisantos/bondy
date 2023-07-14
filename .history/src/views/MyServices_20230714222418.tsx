@@ -42,7 +42,7 @@ const MyServices: FunctionComponent = () => {
                 <PersonCircle />
               </span>
             </div>
-            <span>Kennedy changed oil and cleansed oil filter.</span>
+            <span>Kennedy changed oil and serviced oil filter.</span>
           </div>
         </div>
       </section>
