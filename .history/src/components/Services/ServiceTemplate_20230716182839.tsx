@@ -157,7 +157,7 @@ const ServiceTemplate: FunctionComponent<Props> = ({
                 <small>
                   <TelephoneFill />{" "}
                   <a
-                    href={`tel:+${item.contactPerson.fax}`}
+                    href={`Tel:${item.contactPerson.fax}`}
                     className="text-decoration-none custom-color"
                   >
                     {item.contactPerson.fax}

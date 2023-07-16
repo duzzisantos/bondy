@@ -139,29 +139,17 @@ const ServiceTemplate: FunctionComponent<Props> = ({
               </h5>
               <p className="lh-2">{item.description}</p>
             </section>
-            <section className="p-4 shadow-sm">
+            <section className="p-4 shadow-sm custom-border-5">
               <h5 className="fw-bold mb-3">
                 <PersonCircle /> Contact person
               </h5>
               <small className="fw-bold">{item.contactPerson.name}</small>
               <div className="d-flex flex-column">
                 <small>
-                  <EnvelopeFill />{" "}
-                  <a
-                    href={`mailto:${item.contactPerson.email}`}
-                    className="text-decoration-none custom-color"
-                  >
-                    {item.contactPerson.email}
-                  </a>
+                  <EnvelopeFill /> {item.contactPerson.email}
                 </small>
                 <small>
-                  <TelephoneFill />{" "}
-                  <a
-                    href={`tel:+${item.contactPerson.fax}`}
-                    className="text-decoration-none custom-color"
-                  >
-                    {item.contactPerson.fax}
-                  </a>
+                  <TelephoneFill /> {item.contactPerson.fax}
                 </small>
               </div>
             </section>
