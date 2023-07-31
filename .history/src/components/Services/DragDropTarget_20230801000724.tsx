@@ -17,13 +17,6 @@ const DragDropTarget: FunctionComponent<Props> = ({
   // const divRef: unknown = ref.current?.innerText;
   const divRef = useRef<HTMLDivElement>(null);
 
-  const divText = divRef.current?.innerText;
-  const trimmedDragTargetText = divText
-    ?.replace("drag-target", "")
-    .replace("+\n", "");
-
-  console.log(trimmedDragTargetText);
-
   return (
     <div
       ref={divRef}

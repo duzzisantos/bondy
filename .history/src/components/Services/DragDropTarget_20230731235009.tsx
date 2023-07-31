@@ -1,7 +1,7 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, useState, useRef } from "react";
 
 interface Props {
-  index: number;
+  uniqueID: string;
   handleDrop: any;
   handleDragOver: any;
   children: any;
@@ -9,14 +9,21 @@ interface Props {
 
 const DragDropTarget: FunctionComponent<Props> = ({
   children,
-  index,
+  uniqueID,
   handleDrop,
   handleDragOver,
 }) => {
+  const [wishListOne, setWishListOne] = useState("");
+  const divRef = useRef<HTMLDivElement>(null);
+  const extractedText = divRef!.current!.innerText;
+
+  setWishListOne(extractedText);
+  console.log(wishListOne);
   return (
     <div
+      ref={divRef}
       className="p-3 col-md-4 chosen-services shadow-sm text-center"
-      id={`drop-target-${index + 1}`}
+      id={uniqueID}
       onDrop={handleDrop}
       onDragOver={handleDragOver}
     >

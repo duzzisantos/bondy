@@ -14,16 +14,10 @@ const DragDropTarget: FunctionComponent<Props> = ({
   handleDragOver,
 }) => {
   // const [wishListOne, setWishListOne] = useState("");
+  const ref = useRef("");
   // const divRef: unknown = ref.current?.innerText;
-  const divRef = useRef<HTMLDivElement>(null);
-
-  const divText = divRef.current?.innerText;
-  const trimmedDragTargetText = divText
-    ?.replace("drag-target", "")
-    .replace("+\n", "");
-
-  console.log(trimmedDragTargetText);
-
+  const divRef = ref.current;
+  console.log(divRef);
   return (
     <div
       ref={divRef}
