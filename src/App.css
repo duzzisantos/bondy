@@ -47,11 +47,8 @@ button[role="tab"]:focus {
   text-underline-offset: 10px !important;
 }
 
+.hover-card,
 button[role="tab"]:hover {
-  color: #1f29e4;
-}
-
-.hover-card {
   color: #0077b5 !important;
 }
 
@@ -71,4 +68,22 @@ button[role="tab"]:hover {
 .status-badge {
   height: 30px !important;
   width: 30px !important;
+}
+
+@keyframes spinner {
+  0% {
+    rotate: 0deg;
+  }
+  25% {
+    rotate: 90deg;
+  }
+  50% {
+    rotate: 180deg;
+  }
+  75% {
+    rotate: 270deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
 }
