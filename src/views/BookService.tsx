@@ -6,7 +6,7 @@ import { mockServiceData } from "src/data/mockData";
 
 const BookService: FunctionComponent = () => {
   return (
-    <div className="col-10 px-5 pt-5 py-5 ms-auto vh-100 vstack gap-2 d-flex flex-column text-secondary">
+    <div className="col-10 px-5 pt-5  mt-1 py-5 ms-auto vh-100 vstack gap-2 d-flex flex-column text-secondary">
       <h2 className="text-start fw-bold">Book Service</h2>
       <hr />
       <div className="vstack gap-5">
@@ -33,7 +33,7 @@ const BookService: FunctionComponent = () => {
                     </div>
                   )
                 )}
-                <Button variant="primary" className="mt-5">
+                <Button className="mt-5 custom-pry border-0">
                   Book services
                 </Button>
               </Form>

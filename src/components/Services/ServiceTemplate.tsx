@@ -72,7 +72,7 @@ const ServiceTemplate: FunctionComponent<Props> = ({
   }, [category, getCategories, nextPage, previousPage]);
 
   return (
-    <div className="col-10 px-5 pt-5 py-5 ms-auto vh-100 vstack gap-5 d-flex flex-column text-secondary">
+    <div className="col-10 px-5 pt-5 py-5 mt-1 ms-auto vh-100 vstack gap-5 d-flex flex-column text-secondary">
       {data
         .filter((element) => element.category.includes(serviceCategory))
         .map((item, index) => (
@@ -191,7 +191,7 @@ const ServiceTemplate: FunctionComponent<Props> = ({
                 <ArrowLeftCircleFill /> Go home
               </Button>
               <Button
-                className="btn btn-primary text-light border-0"
+                className="custom-pry text-light border-0"
                 onClick={() => navigate("/book-service")}
               >
                 Start Booking

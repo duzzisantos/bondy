@@ -34,7 +34,7 @@
 
 button[role="tab"] {
   border: 1px solid transparent !important;
-  color: #2f3061;
+  color: rgb(124, 124, 124);
   font-size: 14px;
   text-align: start;
   padding: 0;
@@ -42,13 +42,21 @@ button[role="tab"] {
 
 button[role="tab"]:focus {
   text-decoration: underline !important;
-  text-decoration-color: #ffe66d !important;
+  text-decoration-color: #1f29e4 !important;
   text-decoration-thickness: 5px !important;
   text-underline-offset: 10px !important;
 }
 
 button[role="tab"]:hover {
-  color: #2f3061;
+  color: #1f29e4;
+}
+
+.hover-card {
+  color: #1f29e4 !important;
+}
+
+.custom-pry {
+  background-color: #1f29e4 !important;
 }
 
 .my-services-details {
@@ -63,26 +71,4 @@ button[role="tab"]:hover {
 .status-badge {
   height: 30px !important;
   width: 30px !important;
-}
-
-@keyframes spinner {
-  0% {
-    rotate: 0deg;
-  }
-  25% {
-    rotate: 90deg;
-  }
-  50% {
-    rotate: 180deg;
-  }
-  75% {
-    rotate: 270deg;
-  }
-  100% {
-    rotate: 360deg;
-  }
-}
-
-button[type="button"].nav-link {
-  color: rgb(124, 124, 124);
 }
