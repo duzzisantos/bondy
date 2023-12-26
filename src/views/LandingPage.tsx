@@ -26,14 +26,6 @@ const LandingPage: FunctionComponent = () => {
         displayExtraElement={null}
       />
       <LandingPageScrollContainer
-        content={servicesList}
-        category="Accessories"
-        handleClick={handleClick}
-        extraClass="p-5"
-        extraElement={null}
-        displayExtraElement={null}
-      />
-      <LandingPageScrollContainer
         content={servicesList.reverse().slice(0, 3)}
         category="Trending Services"
         handleClick={handleClick}
