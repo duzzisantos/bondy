@@ -6,21 +6,21 @@
 }
 
 .custom-color {
-  color: #2f3061 !important;
+  color: #0077b5 !important;
 }
 
 .custom-bg-color {
-  background-color: #2f3061 !important;
+  background-color: #0077b5 !important;
 }
 
 .custom-border {
-  border: 1px solid #2f3061;
+  border: 1px solid #0077b5;
 }
 
 .custom-border-5 {
   border-right-style: solid !important;
   border-right-width: 8px !important;
-  border-right-color: #2f3061 !important;
+  border-right-color: #0077b5 !important;
 }
 
 .image-height {
@@ -42,7 +42,7 @@ button[role="tab"] {
 
 button[role="tab"]:focus {
   text-decoration: underline !important;
-  text-decoration-color: #1f29e4 !important;
+  text-decoration-color: #0077b5 !important;
   text-decoration-thickness: 5px !important;
   text-underline-offset: 10px !important;
 }
@@ -52,11 +52,11 @@ button[role="tab"]:hover {
 }
 
 .hover-card {
-  color: #1f29e4 !important;
+  color: #0077b5 !important;
 }
 
 .custom-pry {
-  background-color: #1f29e4 !important;
+  background-color: #0077b5 !important;
 }
 
 .my-services-details {
