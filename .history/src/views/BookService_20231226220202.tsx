@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 
-import { Tabs, Tab, Form } from "react-bootstrap";
+import { Tabs, Tab } from "react-bootstrap";
 
 import { mockServiceData } from "src/data/mockData";
 
@@ -17,27 +17,10 @@ const BookService: FunctionComponent = () => {
               eventKey={`${element.category}`}
               title={element.category}
               className={`border-0 text-start overflow-x-auto`}
-            >
-              {Object.values(element.images).map((item: any, index: number) => (
-                <div key={index}>
-                  <Form.Label
-                    htmlFor={`${index}-${item.serviceName}`}
-                    className="fw-semibold"
-                  >
-                    {item.serviceName}
-                  </Form.Label>
-                  <Form.Switch
-                    id={`${index}-${item.serviceName}`}
-                    type="switch"
-                    name={`${index}-${item.serviceName}`}
-                  />
-                </div>
-              ))}
-            </Tab>
+            ></Tab>
           ))}
         </Tabs>
       </div>
-      <div className="shadow-sm">LOL</div>
     </div>
   );
 };

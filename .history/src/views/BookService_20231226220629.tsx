@@ -19,25 +19,12 @@ const BookService: FunctionComponent = () => {
               className={`border-0 text-start overflow-x-auto`}
             >
               {Object.values(element.images).map((item: any, index: number) => (
-                <div key={index}>
-                  <Form.Label
-                    htmlFor={`${index}-${item.serviceName}`}
-                    className="fw-semibold"
-                  >
-                    {item.serviceName}
-                  </Form.Label>
-                  <Form.Switch
-                    id={`${index}-${item.serviceName}`}
-                    type="switch"
-                    name={`${index}-${item.serviceName}`}
-                  />
-                </div>
+                <Form.Label>{item.serviceName}</Form.Label>
               ))}
             </Tab>
           ))}
         </Tabs>
       </div>
-      <div className="shadow-sm">LOL</div>
     </div>
   );
 };

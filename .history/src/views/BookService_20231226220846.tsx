@@ -20,16 +20,12 @@ const BookService: FunctionComponent = () => {
             >
               {Object.values(element.images).map((item: any, index: number) => (
                 <div key={index}>
-                  <Form.Label
-                    htmlFor={`${index}-${item.serviceName}`}
-                    className="fw-semibold"
-                  >
+                  <Form.Label htmlFor={`${index}-${item.serviceName}`}>
                     {item.serviceName}
                   </Form.Label>
-                  <Form.Switch
+                  <Form.Control
                     id={`${index}-${item.serviceName}`}
                     type="switch"
-                    name={`${index}-${item.serviceName}`}
                   />
                 </div>
               ))}
@@ -37,7 +33,6 @@ const BookService: FunctionComponent = () => {
           ))}
         </Tabs>
       </div>
-      <div className="shadow-sm">LOL</div>
     </div>
   );
 };

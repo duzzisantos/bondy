@@ -37,7 +37,7 @@ const BookService: FunctionComponent = () => {
           ))}
         </Tabs>
       </div>
-      <div className="shadow-sm">LOL</div>
+      <div className="shadow-lg">LOL</div>
     </div>
   );
 };
