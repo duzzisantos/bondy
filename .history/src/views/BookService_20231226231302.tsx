@@ -33,9 +33,7 @@ const BookService: FunctionComponent = () => {
                     </div>
                   )
                 )}
-                <Button variant="primary" className="mt-5">
-                  Book services
-                </Button>
+                <Button variant="primary">Book services</Button>
               </Form>
             </Tab>
           ))}

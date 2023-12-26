@@ -34,10 +34,10 @@ const LandingPageScrollContainer: FunctionComponent<ScrollContainerProps> = ({
             onClick={handleClick}
             title={element.category}
           >
-            <span className={`service-icon-font text-secondary`}>
+            <span className={`service-icon-font custom-color`}>
               {element.icon}
             </span>
-            <span className="text-secondary">{element.category}</span>
+            <span className="custom-color">{element.category}</span>
           </Link>
         ))}
       </div>

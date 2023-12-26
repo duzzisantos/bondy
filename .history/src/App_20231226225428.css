@@ -82,7 +82,3 @@ button[role="tab"]:hover {
     rotate: 360deg;
   }
 }
-
-button[type="button"].nav-link {
-  color: rgb(124, 124, 124);
-}

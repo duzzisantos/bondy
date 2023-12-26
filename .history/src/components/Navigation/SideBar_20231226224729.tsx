@@ -26,6 +26,7 @@ const SideBar: FunctionComponent = () => {
   const handleChangeTheme = () => {
     const mainFile = document.querySelector("html");
     mainFile?.setAttribute("data-bs-theme", "dark");
+
     setTheme(true);
     if (theme) {
       mainFile?.setAttribute("data-bs-theme", "light");

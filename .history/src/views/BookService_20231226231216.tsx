@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 
-import { Tabs, Tab, Form, Button } from "react-bootstrap";
+import { Tabs, Tab, Form } from "react-bootstrap";
 
 import { mockServiceData } from "src/data/mockData";
 
@@ -33,9 +33,6 @@ const BookService: FunctionComponent = () => {
                     </div>
                   )
                 )}
-                <Button variant="primary" className="mt-5">
-                  Book services
-                </Button>
               </Form>
             </Tab>
           ))}

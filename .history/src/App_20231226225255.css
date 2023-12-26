@@ -1,5 +1,5 @@
 * {
-  font-family: "Helvetica", sans-serif;
+  font-family: "Verdana", sans-serif;
 }
 .App {
   text-align: center;
@@ -81,8 +81,4 @@ button[role="tab"]:hover {
   100% {
     rotate: 360deg;
   }
-}
-
-button[type="button"].nav-link {
-  color: rgb(124, 124, 124);
 }

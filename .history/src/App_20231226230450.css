@@ -83,6 +83,6 @@ button[role="tab"]:hover {
   }
 }
 
-button[type="button"].nav-link {
-  color: rgb(124, 124, 124);
+button[type="button"] .nav-link {
+  color: rgba(0, 0, 0, 0.6) !important;
 }

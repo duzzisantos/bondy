@@ -28,7 +28,6 @@ const SideBar: FunctionComponent = () => {
     mainFile?.setAttribute("data-bs-theme", "dark");
     setTheme(true);
     if (theme) {
-      mainFile?.setAttribute("data-bs-theme", "light");
       setTheme(false);
     }
   };

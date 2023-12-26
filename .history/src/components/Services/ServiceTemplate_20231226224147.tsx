@@ -191,7 +191,7 @@ const ServiceTemplate: FunctionComponent<Props> = ({
                 <ArrowLeftCircleFill /> Go home
               </Button>
               <Button
-                className="btn btn-primary text-light border-0"
+                className="main-button text-light border-0"
                 onClick={() => navigate("/book-service")}
               >
                 Start Booking

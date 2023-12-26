@@ -33,7 +33,7 @@ const BookService: FunctionComponent = () => {
                     </div>
                   )
                 )}
-                <Button variant="primary" className="mt-5">
+                <Button variant="primary" className="mt-auto">
                   Book services
                 </Button>
               </Form>

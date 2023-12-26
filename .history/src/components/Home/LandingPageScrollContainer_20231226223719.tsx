@@ -37,7 +37,7 @@ const LandingPageScrollContainer: FunctionComponent<ScrollContainerProps> = ({
             <span className={`service-icon-font text-secondary`}>
               {element.icon}
             </span>
-            <span className="text-secondary">{element.category}</span>
+            <span className="custom-color">{element.category}</span>
           </Link>
         ))}
       </div>

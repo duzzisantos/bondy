@@ -149,7 +149,7 @@ const ServiceTemplate: FunctionComponent<Props> = ({
                   <EnvelopeFill />{" "}
                   <a
                     href={`mailto:${item.contactPerson.email}`}
-                    className="text-decoration-none text-primary"
+                    className="text-decoration-none custom-color"
                   >
                     {item.contactPerson.email}
                   </a>
@@ -158,7 +158,7 @@ const ServiceTemplate: FunctionComponent<Props> = ({
                   <TelephoneFill />{" "}
                   <a
                     href={`tel:+${item.contactPerson.fax}`}
-                    className="text-decoration-none text-primary"
+                    className="text-decoration-none custom-color"
                   >
                     {item.contactPerson.fax}
                   </a>
@@ -191,7 +191,7 @@ const ServiceTemplate: FunctionComponent<Props> = ({
                 <ArrowLeftCircleFill /> Go home
               </Button>
               <Button
-                className="btn btn-primary text-light border-0"
+                className="main-button text-light border-0"
                 onClick={() => navigate("/book-service")}
               >
                 Start Booking

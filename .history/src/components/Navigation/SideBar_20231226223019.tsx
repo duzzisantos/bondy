@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from "react";
+import React, { FunctionComponent, useMemo, useState } from "react";
 import "react-bootstrap";
 import "../../App.css";
 import "./Navigation.scss";
@@ -21,17 +21,11 @@ const SideBar: FunctionComponent = () => {
   const [hoverBookService, setHoverBookService] = useState(false);
   const [hoverAdmin, setHoverAdmin] = useState(false);
   const [hoverLogout, setHoverLogout] = useState(false);
-  const [theme, setTheme] = useState(false);
 
-  const handleChangeTheme = () => {
+  const handleChangeTheme = useMemo(() => {
     const mainFile = document.querySelector("html");
     mainFile?.setAttribute("data-bs-theme", "dark");
-    setTheme(true);
-    if (theme) {
-      mainFile?.setAttribute("data-bs-theme", "light");
-      setTheme(false);
-    }
-  };
+  }, []);
 
   const commonLinkClasses = `d-flex flex-column justify-content-center align-items-center p-1 gap-2 brand-icon-color
    text-decoration-none fw-bold`;
