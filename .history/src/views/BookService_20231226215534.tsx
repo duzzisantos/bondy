@@ -1,9 +1,10 @@
 import React, { FunctionComponent } from "react";
 
 import { Tabs, Tab, Card } from "react-bootstrap";
-
+import BookingForm from "src/components/Services/BookingForm";
+import DragDropTarget from "src/components/Services/DragDropTarget";
 import { mockServiceData } from "src/data/mockData";
-
+import useBookService from "src/hooks/useBookService";
 const BookService: FunctionComponent = () => {
   const handleDragStart = (event: any) => {
     event.dataTransfer.setData("Text", event.target.id);
@@ -18,6 +19,28 @@ const BookService: FunctionComponent = () => {
     const data = event.dataTransfer.getData("Text");
     console.log(data);
     event.target.appendChild(document.getElementById(data));
+  };
+
+  //call custom hook
+
+  const {
+    wishListOne,
+    wishListTwo,
+    wishListThree,
+    wishListFour,
+    wishListFive,
+    wishListSix,
+    changeOne,
+    changeTwo,
+    changeThree,
+    changeFour,
+    changeFive,
+    changeSix,
+  } = useBookService("");
+
+  const handleSubmit = (e: SubmitEvent) => {
+    e.preventDefault();
+    console.log(wishListFive, wishListFour, wishListSix);
   };
 
   return (
@@ -60,6 +83,39 @@ const BookService: FunctionComponent = () => {
             </Tab>
           ))}
         </Tabs>
+      </div>
+      <div className="text-start py-4">
+        <span>
+          <strong>Wishlist</strong>
+        </span>
+        <div className="hstack gap-4 mt-4 py-4 d-flex flex-row flex-wrap">
+          {[1, 2, 3, 4, 5, 6].map((element) => (
+            <DragDropTarget
+              key={element}
+              uniqueID={`drop-target-${element}`}
+              children={"+"}
+              handleDrop={handleDrop}
+              handleDragOver={handleDragOver}
+            />
+          ))}
+        </div>
+        <>
+          <BookingForm
+            wishListOne={wishListOne}
+            wishListTwo={wishListTwo}
+            wishListThree={wishListThree}
+            wishListFour={wishListFour}
+            wishListFive={wishListFive}
+            wishListSix={wishListSix}
+            setWishlistOne={changeOne}
+            setWishListTwo={changeTwo}
+            setWishListThree={changeThree}
+            setWishListFour={changeFour}
+            setWishListFive={changeFive}
+            setWishListSix={changeSix}
+            handleSubmit={handleSubmit}
+          />
+        </>
       </div>
     </div>
   );
